@@ -110,3 +110,46 @@ def cleanmesh(f,v):
         for j in range(3):
             f[i,j] = TC[f[i,j]]
     return v,f
+
+from stl import mesh
+from mpl_toolkits import mplot3d
+import matplotlib.pyplot as plt
+
+def plotstl(stlpath,figpath):
+    # create a new plot
+    fig = plt.figure(figsize=(3, 3), dpi=300)
+    ax = mplot3d.Axes3D(fig, proj_type ='ortho') 
+    plt.rc('font', size=6) 
+
+    # load STL files and add the vectors to the plot
+    your_mesh = mesh.Mesh.from_file(stlpath)
+    surf = mplot3d.art3d.Poly3DCollection(your_mesh.vectors,linewidth=0.15,facecolors='grey', 
+                                          edgecolor = 'b', alpha=.8)
+    # set axis properties
+    ax.add_collection3d(surf)
+
+    # set scale
+    ax.set_xlim([-0.6, 0.6])
+    ax.set_ylim([-0.6, 0.6])
+    ax.set_zlim([-0.6, 0.6])
+    ax.set_xticks(np.arange(-0.6, 0.601, step=0.3))
+    ax.set_yticks(np.arange(-0.6, 0.601, step=0.3))
+    ax.set_zticks(np.arange(-0.6, 0.601, step=0.3))
+
+    # Show the plot to the screen
+    plt.show()
+
+    fig.savefig(figpath,dpi = 300, bbox_inches='tight')
+
+def sh2stl(coeff, sph_cor, vertices, faces,stlpath):
+    # update vertices by SH expansion
+    for i in range(3):
+        vertices[:,i] = sph2cart(coeff,sph_cor[:,4],sph_cor[:,5])[i]
+
+    # Create the mesh
+    cube = mesh.Mesh(np.zeros(faces.shape[0], dtype=mesh.Mesh.dtype))
+    for i, f in enumerate(faces):
+        for j in range(3):
+            cube.vectors[i][j] = vertices[f[j],:]
+    # Write the mesh to file "cube.stl"
+    cube.save(stlpath)
