@@ -1,21 +1,26 @@
 # Spherical Harmonics Particle Shape Generator - SHPSG
 
+## Why should I use SHPSG?
+
 * Particle shape influences the properties of granular materials, e.g., packing density, shear strength, permeability. 
 
 * Existing methods generating irregular particle shapes are sometimes over-simplified, e.g., ellipsoids, rod-like particles, or particle 'clusters'.
 
-* This algorithm randomly generates 3D particle morphologies of user-specified irregularity with Spherical Harmonics.
+* SHPSG provides a systemetic approch to randomly generates 3D particle morphologies with user-specified irregularity.
 
-* This algorithm systematically controls shape irregularity at different scales, e.g., form, roundness and roughness.
+* Shape irregularity is controlled at different scales, e.g., form, roundness and roughness.
 
 ## Getting started
 
-* These instructions will illustrate the procedures to generate irregular particle shapes with SHPSG.
+* To install, you just need to clone the repository.
 
-* The algorithm depends on most common packages in Python.
+* You could define parameters, export stl files and visulize generated particles in main.ipynb.
 
-* We introduced the theory behind the generation method in two papers: rotational-invirant analysis <a href="https://www.icevirtuallibrary.com/doi/abs/10.1680/jgele.17.00011" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
+* We provide a brief introduction to particle shape and several examples here.
 
+* The theory behind the generation method was illustrated in two papers: rotational-invirant analysis <a href="https://www.icevirtuallibrary.com/doi/abs/10.1680/jgele.17.00011" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
+
+* We welcome discussion and contribution to improve SHPSG.
 
 ## Particle shape
 
@@ -32,7 +37,7 @@
 * A high-resolution surface mesh is needed to show the influence of D9_15.
 
 
-## Parameter control examples
+## Parameter examples
 
 ```
 A sphere: Ei = 1; Fi = 1; D2_8 = 0; D9_15 = 0
@@ -78,7 +83,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-We were inspired by several libraries in our methodology development and code development. We would like to especially thank their authors for the great work and publishing the code.
+We were inspired by several libraries during methodology and code development. We would like to thank their authors for the great work and publishing the code.
 
 - [SPHARM-MAT](http://www.iu.edu/~spharm/SPHARM-docs/C01_Introduction.html)
 - [icosphere](https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere)
