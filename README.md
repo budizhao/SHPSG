@@ -1,8 +1,12 @@
-# Spherical Harmonics Particle Shape Generator
+# Spherical Harmonics Particle Shape Generator - SHPSG
 
-* Particle shape influences the hydro-mechanical behaviour of granular materials, e.g., packing density, shear strength, permeability. 
-* Previous researches on particle shape effects mainly adopted ellipsoids, rod-like particles, or particle 'clusters'. These particles are either over-simplified or randomly selected. 
-* We proposed a systemetic approach to randomly generate 3D particle morphologies with well-controled irregularith. This method depends on a series of Spherical Harmonics fuctions defined on a sphere.
+* Particle shape influences the properties of granular materials, e.g., packing density, shear strength, permeability. 
+
+* Existing methods generating irregular particle shapes are sometimes over-simplified, e.g., ellipsoids, rod-like particles, or particle 'clusters'.
+
+* This algorithm randomly generates 3D particle morphologies of user-specified irregularity with Spherical Harmonics.
+
+* This algorithm systematically controls shape irregularity at different scales, e.g., form, roundness and roughness.
 
 ## Getting started
 
@@ -10,26 +14,25 @@
 
 * The algorithm depends on most common packages in Python.
 
-* Please refer to our papers on linking SHs coefficients and shape pactors <a href="https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere" target="_blank">Link</a> and SHs coeffecients random generation method 
+* The theories were introduced in two papers: rotational-invirant analysis <a href="https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
 
 
 ## Particle shape
 
 * Particle shape is a multi-scale feature and usually described at three scales, i.e. form, roundness and roughness.
 
-* Spherical Harmonics decompose particle shape features into several degrees. Our study shows particle form and roundness are well represented at degree 1 and 8, respectively. 
+* Spherical Harmonics decompose particle shape features into different scales, SH 'degrees'. For example, particle roundness is well represented with SH coefficients from degree 2 to 8.
 
-* Particle form is defined by three principal dimensions that perpendicular to each other: a$\geq$b$\geq$c. Elongation index Ei = b/a, flatness index Fi = c/b.
+* Particle form is defined by three principal dimensions that perpendicular to each other: a$\geq$b$\geq$c. We control two aspect ratios: elongation index Ei = b/a, and flatness index Fi = c/b.
 
-* Particle roundness is related to SHs coefficients $D_{2-8}$. Higher $D_{2-8}$ value leads to lower roundness.
+* Particle roundness reflects curvatures at corners. A higher roundness particle has a lower $D_{2-8}$.
 
-* Roughness is related to SHs coefficients $D_{9-15}$. Note that we did not show examples of roughness control. 
+* Roughness characterizes surface featureas between corners. A higher roughness particle has a lower $D_{9-15}$.
 
 * The particles are represented by surface meshes with 320 triangular elements. Finer mesh could be used by increasing the mesh subdivision number. A finer surface mesh is needed to show the influence of $D_{9-15}$.
 
 
 ## Examples
-
 
 ```
 A sphere: Ei = 1; Fi = 1; $D_{2-8} = 0$, and $D_{9-15} = 0$.
@@ -44,12 +47,9 @@ More angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.4$, and $D_{9-15} = 0$.
 
 ```
 
-
 ## Authors
 
-* **Deheng Wei** - *developed first Matlab code in combination with SPHARM-PDM*
-* **Budi Zhao** - *supervised Deheng and developed the standalone Python code*
-* **Jianfeng Wang** - *principal investigator for this project*
+**Budi Zhao** **Deheng Wei** **Jianfeng Wang** 
 
 ## License
 
