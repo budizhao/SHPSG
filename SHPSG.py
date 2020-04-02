@@ -1,11 +1,6 @@
 import numpy as np
 
 def SHPSG(Ei, Fi, D2_8, D9_15):
-    #-------------------------------------------------------------------------------------------------------
-    # SHPSG.V1: Spherical Harmonic Particle Shape Generator (Feb 2018)
-    #   -By Deheng WEI, Budi Zhao and Jeff Wang
-    #   -Please refer to Wei et al. (2018) and Zhao et al. (2017)
-    #-------------------------------------------------------------------------------------------------------
     Fvec = np.zeros((4,3),dtype=complex)
     # Determine C0 and C1 with Ei, Fi and a unit maximum principal dimension 
     # A sphere with unit diameter  

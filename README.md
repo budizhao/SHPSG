@@ -1,8 +1,12 @@
-# Spherical Harmonics Particle Shape Generator
+# Spherical Harmonics Particle Shape Generator - SHPSG
 
-* Particle shape influences the hydro-mechanical behaviour of granular materials, e.g., packing density, shear strength, permeability. 
-* Previous researches on particle shape effects mainly adopted ellipsoids, rod-like particles, or particle 'clusters'. These particles are either over-simplified or randomly selected. 
-* We proposed a systemetic approach to randomly generate 3D particle morphologies with well-controled irregularith. This method depends on a series of Spherical Harmonics fuctions defined on a sphere.
+* Particle shape influences the properties of granular materials, e.g., packing density, shear strength, permeability. 
+
+* Existing methods generating irregular particle shapes are sometimes over-simplified, e.g., ellipsoids, rod-like particles, or particle 'clusters'.
+
+* This algorithm randomly generates 3D particle morphologies of user-specified irregularity with Spherical Harmonics.
+
+* This algorithm systematically controls shape irregularity at different scales, e.g., form, roundness and roughness.
 
 ## Getting started
 
@@ -10,51 +14,71 @@
 
 * The algorithm depends on most common packages in Python.
 
-* Please refer to our papers on linking SHs coefficients and shape pactors <a href="https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere" target="_blank">Link</a> and SHs coeffecients random generation method 
+* We introduced the theory behind the generation method in two papers: rotational-invirant analysis <a href="https://www.icevirtuallibrary.com/doi/abs/10.1680/jgele.17.00011" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
 
 
 ## Particle shape
 
 * Particle shape is a multi-scale feature and usually described at three scales, i.e. form, roundness and roughness.
 
-* Spherical Harmonics decompose particle shape features into several degrees. Our study shows particle form and roundness are well represented at degree 1 and 8, respectively. 
+* Spherical Harmonics decompose particle shape features into different scales, SH 'degrees'. For example, particle roundness is well represented with SH coefficients from degree 2 to 8.
 
-* Particle form is defined by three principal dimensions that perpendicular to each other: a$\geq$b$\geq$c. Elongation index Ei = b/a, flatness index Fi = c/b.
+* Particle form is defined by three principal dimensions that perpendicular to each other: a$\geq$b$\geq$c. We control two aspect ratios: elongation index Ei = b/a, and flatness index Fi = c/b.
 
-* Particle roundness is related to SHs coefficients $D_{2-8}$. Higher $D_{2-8}$ value leads to lower roundness.
+* Particle roundness reflects curvatures at corners. A higher roundness particle has a lower D2_8.
 
-* Roughness is related to SHs coefficients $D_{9-15}$. Note that we did not show examples of roughness control. 
+* Roughness characterizes surface featureas between corners. A higher roughness particle has a lower D9_15.
 
-* The particles are represented by surface meshes with 320 triangular elements. Finer mesh could be used by increasing the mesh subdivision number. A finer surface mesh is needed to show the influence of $D_{9-15}$.
+* A high-resolution surface mesh is needed to show the influence of D9_15.
 
 
-## Examples
+## Parameter control examples
+
+```
+A sphere: Ei = 1; Fi = 1; D2_8 = 0; D9_15 = 0
+
+Oblate spheroid: Ei = 1; Fi = 0.5; D2_8 = 0; D9_15 = 0
+
+Probalate spheroid: Ei = 0.5; Fi =1; D2_8 = 0; D9_15 = 0
+
+Low angularity: Ei = 1; Fi = 1; D2_8 = 0.1; D9_15 = 0
+
+High angularity: Ei = 1; Fi = 1; D2_8 = 0.4; D9_15 = 0
+```
+
+## Random generated angular particles
+```
+D2_8 = 0.1
+```
+<img src="examples/D2_8_0.1.gif" width="50%" height="50%">
+
+```
+D2_8 = 0.2
+```
+<img src="examples/D2_8_0.2.gif" width="50%" height="50%">
+
+```
+D2_8 = 0.3
+```
+<img src="examples/D2_8_0.3.gif" width="50%" height="50%">
 
 
 ```
-A sphere: Ei = 1; Fi = 1; $D_{2-8} = 0$, and $D_{9-15} = 0$.
-
-An elipsoid: Ei = 1; Fi = 0.5; $D_{2-8} = 0$, and $D_{9-15} = 0$.
-
-An elipsoid: Ei = 0.8; Fi = 0.5; $D_{2-8} = 0$, and $D_{9-15} = 0$.
-
-Angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.2$, and $D_{9-15} = 0$.
-
-More angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.4$, and $D_{9-15} = 0$.
+D2_8 = 0.4
+```
+<img src="examples/D2_8_0.4.gif" width="50%" height="50%">
 
 ```
-
-
-## Authors
-
-* **Deheng Wei** - *developed first Matlab code in combination with SPHARM-PDM*
-* **Budi Zhao** - *supervised Deheng and developed the standalone Python code*
-* **Jianfeng Wang** - *principal investigator for this project*
+Ei = 1; Fi = 1; D9_15 = 0 for these four groups of particles
+```
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
-* *Icosahedron and subdivision code based on Matlab code by Wil O.C. Ward* <a href="https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere" target="_blank">Link</a>
+We were inspired by several libraries in our methodology development and code development. We would like to especially thank their authors for the great work and publishing the code.
+
+- [SPHARM-MAT](http://www.iu.edu/~spharm/SPHARM-docs/C01_Introduction.html)
+- [icosphere](https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere)
