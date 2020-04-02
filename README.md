@@ -56,6 +56,7 @@ D2_8 = 0.1
 ```
 D2_8 = 0.2
 <img src="examples/D2_8_0.2.gif" width="50%" height="50%">
+```
 
 ```
 D2_8 = 0.3
