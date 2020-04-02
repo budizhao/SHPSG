@@ -25,11 +25,11 @@
 
 * Particle form is defined by three principal dimensions that perpendicular to each other: a$\geq$b$\geq$c. We control two aspect ratios: elongation index Ei = b/a, and flatness index Fi = c/b.
 
-* Particle roundness reflects curvatures at corners. A higher roundness particle has a lower $D_{2-8}$.
+* Particle roundness reflects curvatures at corners. A higher roundness particle has a lower D2_8.
 
-* Roughness characterizes surface featureas between corners. A higher roughness particle has a lower $D_{9-15}$.
+* Roughness characterizes surface featureas between corners. A higher roughness particle has a lower D9_15.
 
-* The particles are represented by surface meshes with 320 triangular elements. Finer mesh could be used by increasing the mesh subdivision number. A finer surface mesh is needed to show the influence of $D_{9-15}$.
+* A high-resolution surface mesh is needed to show the influence of D9_15.
 
 
 ## Parameter control examples
