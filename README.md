@@ -34,16 +34,20 @@
 
 ## Parameter control examples
 
+Ei,Fi = 2/5,1
+D2_8 = [0.0]
+D9_15 = [0.0]
+
 ```
-A sphere: Ei = 1; Fi = 1; $D_{2-8} = 0$, and $D_{9-15} = 0$.
+A sphere: Ei = 1; Fi = 1; D2_8 = 0; D9_15 = 0
 
-An elipsoid: Ei = 1; Fi = 0.5; $D_{2-8} = 0$, and $D_{9-15} = 0$.
+Oblate spheroid: Ei = 1; Fi = 0.5; D2_8 = 0; D9_15 = 0
 
-An elipsoid: Ei = 0.8; Fi = 0.5; $D_{2-8} = 0$, and $D_{9-15} = 0$.
+Probalate spheroid: Ei = 0.5; Fi =1; D2_8 = 0; D9_15 = 0
 
-Angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.2$, and $D_{9-15} = 0$.
+Low angularity: Ei = 1; Fi = 1; D2_8 = 0.1; D9_15 = 0
 
-More angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.4$, and $D_{9-15} = 0$.
+High angularity: Ei = 1; Fi = 1; D2_8 = 0.4; D9_15 = 0
 
 ```
 ## Random generated angular particles
@@ -73,4 +77,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* *Icosahedron and subdivision code based on Matlab code by Wil O.C. Ward* <a href="https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere" target="_blank">Link</a>
+We were inspired by several libraries in our methodology development and code development. We would like to especially thank their authors for the great work and publishing the code.
+
+- [SPHARM-MAT](http://www.iu.edu/~spharm/SPHARM-docs/C01_Introduction.html)
+- [icosphere](https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere)
