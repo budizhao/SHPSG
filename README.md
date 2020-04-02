@@ -50,23 +50,24 @@ High angularity: Ei = 1; Fi = 1; D2_8 = 0.4; D9_15 = 0
 ```
 Ei = 1; Fi = 1; D9_15 = 0
 D2_8 = 0.1
-<img src="examples/D2_8_0.1.gif" width="50%" height="50%">
 ```
+<img src="examples/D2_8_0.1.gif" width="50%" height="50%">
 
 ```
 D2_8 = 0.2
-<img src="examples/D2_8_0.2.gif" width="50%" height="50%">
 ```
+<img src="examples/D2_8_0.2.gif" width="50%" height="50%">
 
 ```
 D2_8 = 0.3
-<img src="examples/D2_8_0.3.gif" width="50%" height="50%">
 ```
+<img src="examples/D2_8_0.3.gif" width="50%" height="50%">
+
 
 ```
 D2_8 = 0.4
-<img src="examples/D2_8_0.4.gif" width="50%" height="50%">
 ```
+<img src="examples/D2_8_0.4.gif" width="50%" height="50%">
 
 ## License
 
