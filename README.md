@@ -14,7 +14,7 @@
 
 * The algorithm depends on most common packages in Python.
 
-* The theories were introduced in two papers: rotational-invirant analysis <a href="https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
+* We introduced the theory behind the generation method in two papers: rotational-invirant analysis <a href="https://www.icevirtuallibrary.com/doi/abs/10.1680/jgele.17.00011" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
 
 
 ## Particle shape
