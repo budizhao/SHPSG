@@ -32,7 +32,7 @@
 * The particles are represented by surface meshes with 320 triangular elements. Finer mesh could be used by increasing the mesh subdivision number. A finer surface mesh is needed to show the influence of $D_{9-15}$.
 
 
-## Examples
+## Parameter control examples
 
 ```
 A sphere: Ei = 1; Fi = 1; $D_{2-8} = 0$, and $D_{9-15} = 0$.
@@ -46,7 +46,25 @@ Angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.2$, and $D_{9-15} = 0$.
 More angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.4$, and $D_{9-15} = 0$.
 
 ```
-![$D_{2-8} = 0.1$](examples/D2_8_0.1.gif){:height="50%" width="50%"}
+## Random generated angular particles
+```
+Ei = 1; Fi = 1; $D_{9-15} = 0$
+```
+$D_{2-8} = 0.1$
+
+<img src="examples/D2_8_0.1.gif" width="50%" height="50%">
+
+$D_{2-8} = 0.2$
+
+<img src="examples/D2_8_0.2.gif" width="50%" height="50%">
+
+$D_{2-8} = 0.3$
+
+<img src="examples/D2_8_0.3.gif" width="50%" height="50%">
+
+$D_{2-8} = 0.4$
+
+<img src="examples/D2_8_0.4.gif" width="50%" height="50%">
 
 
 
