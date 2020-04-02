@@ -67,11 +67,6 @@ $D_{2-8} = 0.4$
 <img src="examples/D2_8_0.4.gif" width="50%" height="50%">
 
 
-
-## Authors
-
-**Budi Zhao** **Deheng Wei** **Jianfeng Wang** 
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
