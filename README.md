@@ -46,6 +46,9 @@ Angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.2$, and $D_{9-15} = 0$.
 More angular particle: Ei = 1; Fi = 1; $D_{2-8} = 0.4$, and $D_{9-15} = 0$.
 
 ```
+![alt text](examples/D2_8_0.1.gif)
+
+
 
 ## Authors
 
