@@ -86,5 +86,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 We were inspired by several libraries during methodology and code development. We would like to thank their authors for the great work and publishing the code.
 
 - [SPHARM-MAT](http://www.iu.edu/~spharm/SPHARM-docs/C01_Introduction.html)
-- [Fourier2D] (https://link.springer.com/article/10.1007/s10035-012-0356-x)
+- [Fourier2D](https://link.springer.com/article/10.1007/s10035-012-0356-x)
 - [icosphere](https://www.mathworks.com/matlabcentral/fileexchange/50105-icosphere)
