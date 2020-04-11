@@ -63,12 +63,7 @@ D2_8 = 0.3
 <img src="examples/D2_8_0.3.gif" width="50%" height="50%">
 
 ```
-D2_8 = 0.4
-```
-<img src="examples/D2_8_0.4.gif" width="50%" height="50%">
-
-```
-Ei = 1; Fi = 1; D9_15 = 0 for these four groups of particles
+Ei = 1; Fi = 1; D9_15 = 0 for these groups of particles
 ```
 
 ## License
