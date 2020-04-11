@@ -6,7 +6,7 @@
 
 * Existing methods generating irregular particle shapes are sometimes over-simplified, e.g., ellipsoids, rod-like particles, or particle 'clusters'.
 
-* SHPSG provides a systemetic approch to randomly generates 3D particle morphologies with user-specified irregularity.
+* SHPSG provides a systematic approach to randomly generates 3D particle morphologies with user-specified irregularity.
 
 * Shape irregularity is controlled at different scales, e.g., form, roundness and roughness.
 
@@ -16,7 +16,7 @@
 
 * Run the example provided in main.ipynb.
 
-* We provide particle shape introduction, parameter examples, and randonly generated angular particles.
+* We provide particle shape introduction, parameter examples, and randomly generated angular particles.
 
 ## Particle shape introduction
 
@@ -28,7 +28,7 @@
 
 * Particle roundness reflects curvatures at corners. We increase D2_8 to generate more angular particles.
 
-* Roughness characterizes surface featureas at corners and between corners. We increase D9_15 to produce a higher roughness.
+* Roughness characterizes surface features at corners and between corners. We increase D9_15 to produce a higher roughness.
 
 * More details about the theory behind SHPSG were described in two papers: rotational-invirant analysis <a href="https://www.icevirtuallibrary.com/doi/abs/10.1680/jgele.17.00011" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
 
@@ -72,7 +72,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-We were inspired by prevoius studies and libraries during methodology and code development. We would like to thank their authors for the great work and publishing the code. We welcome discussion and contribution to improve SHPSG.
+We were inspired by previous studies and libraries during methodology and code development. We would like to thank their authors for the great work and publishing the code. We welcome discussion and contribution to improving SHPSG.
 
 - [SPHARM-MAT](http://www.iu.edu/~spharm/SPHARM-docs/C01_Introduction.html)
 - [Fourier2D](https://link.springer.com/article/10.1007/s10035-012-0356-x)
