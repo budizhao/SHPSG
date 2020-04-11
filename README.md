@@ -22,7 +22,7 @@
 
 * Particle shape is a multi-scale feature and usually quantified at three scales, i.e. form, roundness and roughness.
 
-* Spherical Harmonics decompose particle shape features into different SH degrees. Higher SH degree reproduces smaller surface features. Particle form and roundness are well represented up to SH degree 8.
+* Spherical Harmonics decompose particle shape features into different SH degrees, and higher SH degree reproduces smaller surface features.
 
 * Particle form is defined by three principal dimensions that perpendicular to each other: a$\geq$b$\geq$c. We control two aspect ratios: elongation index Ei = b/a, and flatness index Fi = c/b.
 
