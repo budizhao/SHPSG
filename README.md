@@ -6,7 +6,7 @@
 
 * Existing methods generating irregular particle shapes are sometimes over-simplified, e.g., ellipsoids, rod-like particles, or particle 'clusters'.
 
-* SHPSG provides a systematic approach to randomly generates 3D particle morphologies with user-specified irregularity.
+* SHPSG provides a systematic approach to randomly generate 3D particle morphologies with user-specified irregularity.
 
 * Shape irregularity is controlled at different scales, e.g., form, roundness and roughness.
 
