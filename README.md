@@ -10,32 +10,27 @@
 
 * Shape irregularity is controlled at different scales, e.g., form, roundness and roughness.
 
-## Getting started
+## How to use SHPSG?
 
-* To install, you just need to clone the repository.
+* Clone the repository and get started.
 
-* You could define parameters, export stl files and visulize generated particles in main.ipynb.
+* Run the example provided in main.ipynb.
 
-* We provide a brief introduction to particle shape and several examples here.
+* We provide particle shape introduction, parameter examples, and randonly generated angular particles.
 
-* The theory behind the generation method was illustrated in two papers: rotational-invirant analysis <a href="https://www.icevirtuallibrary.com/doi/abs/10.1680/jgele.17.00011" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
+## Particle shape introduction
 
-* We welcome discussion and contribution to improve SHPSG.
+* Particle shape is a multi-scale feature and usually quantified at three scales, i.e. form, roundness and roughness.
 
-## Particle shape
-
-* Particle shape is a multi-scale feature and usually described at three scales, i.e. form, roundness and roughness.
-
-* Spherical Harmonics decompose particle shape features into different scales, SH 'degrees'. For example, particle roundness is well represented with SH coefficients from degree 2 to 8.
+* Spherical Harmonics decompose particle shape features into different SH degrees. Higher SH degree reproduces smaller surface features. Particle form and roundness are well represented up to SH degree 8.
 
 * Particle form is defined by three principal dimensions that perpendicular to each other: a$\geq$b$\geq$c. We control two aspect ratios: elongation index Ei = b/a, and flatness index Fi = c/b.
 
-* Particle roundness reflects curvatures at corners. A higher roundness particle has a lower D2_8.
+* Particle roundness reflects curvatures at corners. We increase D2_8 to generate more angular particles.
 
-* Roughness characterizes surface featureas between corners. A higher roughness particle has a lower D9_15.
+* Roughness characterizes surface featureas at corners and between corners. We increase D9_15 to produce a higher roughness.
 
-* A high-resolution surface mesh is needed to show the influence of D9_15.
-
+* More details about the theory behind SHPSG were described in two papers: rotational-invirant analysis <a href="https://www.icevirtuallibrary.com/doi/abs/10.1680/jgele.17.00011" target="_blank">Link</a> and SHs coeffecients random generation method <a href="https://www.sciencedirect.com/science/article/abs/pii/S0032591018301189" target="_blank">Link</a>
 
 ## Parameter examples
 
@@ -67,7 +62,6 @@ D2_8 = 0.3
 ```
 <img src="examples/D2_8_0.3.gif" width="50%" height="50%">
 
-
 ```
 D2_8 = 0.4
 ```
@@ -83,7 +77,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-We were inspired by several libraries during methodology and code development. We would like to thank their authors for the great work and publishing the code.
+We were inspired by prevoius studies and libraries during methodology and code development. We would like to thank their authors for the great work and publishing the code. We welcome discussion and contribution to improve SHPSG.
 
 - [SPHARM-MAT](http://www.iu.edu/~spharm/SPHARM-docs/C01_Introduction.html)
 - [Fourier2D](https://link.springer.com/article/10.1007/s10035-012-0356-x)
